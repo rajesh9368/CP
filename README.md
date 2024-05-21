@@ -9,7 +9,7 @@
 # Find the closest number (GFG) 
 # Modular Exponentiation for large numbers (GFG)
 # Subsets (LC)
-#
+# K closest elements (CN)
 
 
 #18/MAY/2024
