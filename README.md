@@ -10,6 +10,9 @@
 # Modular Exponentiation for large numbers (GFG)
 # Subsets (LC)
 # K closest elements (CN)
+# Palindrome Partitioning(LC)
+#  Excel Sheet | Part-2 (CN)
+# Minimize Max Distance to Gas Station(GFG)
 
 
 #18/MAY/2024
