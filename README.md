@@ -24,4 +24,5 @@ https://www.naukri.com/code360/problems/intersection-of-linked-lists_3210610 (Co
 #19/MAY/2024
 https://www.geeksforgeeks.org/problems/find-the-closest-number5513/1(Gfg simple iteration)
 
-
+# Index of an Extra Element (GFG)
+#  Count Customers Who Did Not Get A Computer(CN)
