@@ -13,11 +13,8 @@
 # Palindrome Partitioning(LC)
 #  Excel Sheet | Part-2 (CN)
 # Minimize Max Distance to Gas Station(GFG)
-#18/MAY/2024
-https://leetcode.com/problems/distribute-coins-in-binary-tree/ (Star) (Leetcode greedy approach on tree and recursion)
-https://www.geeksforgeeks.org/problems/find-the-highest-number2259/1 (Gfg Binary Search Peak Element)
-https://www.naukri.com/code360/problems/intersection-of-linked-lists_3210610 (Coding Ninjas map on Linked List)
-#19/MAY/2024
-https://www.geeksforgeeks.org/problems/find-the-closest-number5513/1(Gfg simple iteration)
-# Index of an Extra Element (GFG)
-#  Count Customers Who Did Not Get A Computer(CN)
+################################################################################
+
+# Kth Smallest and Largest Element of Array(CN)
+# Nuts and Bolts Problem (GFG)
+#  Height Checker (LC)
