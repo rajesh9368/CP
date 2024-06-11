@@ -18,3 +18,5 @@
 # Kth Smallest and Largest Element of Array(CN)
 # Nuts and Bolts Problem (GFG)
 #  Height Checker (LC)
+# Relative Sort Array(LC)
+# Maximum Tip Calculator(GFG)
