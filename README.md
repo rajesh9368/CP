@@ -20,3 +20,6 @@
 #  Height Checker (LC)
 # Relative Sort Array(LC)
 # Maximum Tip Calculator(GFG)
+# Count numbers containing 4(GFG)
+# Sort Colors(LC)
+# Subarray with distinct integers(CN) ***Pending***
