@@ -23,3 +23,6 @@
 # Count numbers containing 4(GFG)
 # Sort Colors(LC)
 # Subarray with distinct integers(CN) ***Pending***
+# Different Ways To Add Parenthesis(CN) ***Pending***
+# Padovan Sequence(LC)
+#  Minimum Number of Moves to Seat Everyone(LC)
