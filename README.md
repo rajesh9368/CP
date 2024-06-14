@@ -26,3 +26,6 @@
 # Different Ways To Add Parenthesis(CN) ***Pending***
 # Padovan Sequence(LC)
 #  Minimum Number of Moves to Seat Everyone(LC)
+# Minimum Increment to Make Array Unique(LC)
+# Armstrong Numbers (GFG)
+# Modular Node (CN) ***Pending***
