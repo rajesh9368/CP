@@ -29,3 +29,6 @@
 # Minimum Increment to Make Array Unique(LC)
 # Armstrong Numbers (GFG)
 # Modular Node (CN) ***Pending***
+#  Bit Set ( CN )
+# Mobile numeric keypad (GFG)
+#  IPO (LC) ***Pending***
