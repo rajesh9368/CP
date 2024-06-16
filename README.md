@@ -32,3 +32,14 @@
 #  Bit Set ( CN )
 # Mobile numeric keypad (GFG)
 #  IPO (LC) ***Pending***
+#  Meta Strings (CN)
+#  Prime Pair with Target Sum ***Pending***
+#  Patching Array (LC)
+
+
+
+
+
+***LC CONTEST***
+# Count Pairs That Form a Complete Day I
+# Count Pairs That Form a Complete Day II
