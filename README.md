@@ -39,8 +39,9 @@
 ################################################################################
 
 # Partition(CN)  ***Pending***
-# Check If two Line segments Intersect (GFG) 
+# Check If two Line segments Intersect (GFG) ***Pending***
 # Sum of Square Numbers (LC)
+#  Minimum Deletions To Make Character Frequencies Unique(CN)
 
 
 ***LC CONTEST***
