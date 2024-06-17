@@ -36,8 +36,11 @@
 #  Prime Pair with Target Sum ***Pending***
 #  Patching Array (LC)
 
+################################################################################
 
-
+# Partition(CN)  ***Pending***
+# Check If two Line segments Intersect (GFG) 
+# Sum of Square Numbers (LC)
 
 
 ***LC CONTEST***
