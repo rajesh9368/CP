@@ -42,7 +42,10 @@
 # Check If two Line segments Intersect (GFG) ***Pending***
 # Sum of Square Numbers (LC)
 #  Minimum Deletions To Make Character Frequencies Unique(CN)
-
+#  Binary Pattern (CN)
+#   Reaching Points (CN) ***10/11***
+# Number of Rectangles in a Circle(GFG)
+# Most Profit Assigning Work(LC)
 
 ***LC CONTEST***
 # Count Pairs That Form a Complete Day I
