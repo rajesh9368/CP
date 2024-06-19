@@ -46,6 +46,8 @@
 #   Reaching Points (CN) ***10/11***
 # Number of Rectangles in a Circle(GFG)
 # Most Profit Assigning Work(LC)
+#  Find maximum volume of a cuboid(GFG)
+#  Minimum Number of Days to Make m Bouquets (LC)
 
 ***LC CONTEST***
 # Count Pairs That Form a Complete Day I
