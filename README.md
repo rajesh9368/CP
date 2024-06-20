@@ -48,6 +48,8 @@
 # Most Profit Assigning Work(LC)
 #  Find maximum volume of a cuboid(GFG)
 #  Minimum Number of Days to Make m Bouquets (LC)
+#    Find MSB In O(1) (CN)
+# Magnetic Force Between Two Balls(LC)
 
 ***LC CONTEST***
 # Count Pairs That Form a Complete Day I
