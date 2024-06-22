@@ -52,7 +52,9 @@
 # Magnetic Force Between Two Balls(LC)
 # Grumpy Bookstore Owner(LC)
 # Compare two fractions(GFG)
-
+#  Boring Factorials(CN)
+#  Count Number of Nice Subarrays (LC)
+# 
 ***LC CONTEST***
 # Count Pairs That Form a Complete Day I
 # Count Pairs That Form a Complete Day II
