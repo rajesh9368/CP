@@ -74,3 +74,5 @@
 # Count Pairs That Form a Complete Day II
 # Minimum Average of Smallest and Largest Elements
 # Find the Minimum Area to Cover All Ones I
+# Maximum Height of a Triangle
+# Find the Maximum Length of Valid Subsequence I
