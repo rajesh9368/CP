@@ -1,8 +1,7 @@
 # CP
 
-# Identical Linked Lists (GFG)
-# Maximum Difference(CN) 
-
+# Three Consecutive Odds (LC) 
+# Power Set(CN)
 
 
 
