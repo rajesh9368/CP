@@ -2,6 +2,8 @@
 
 # Three Consecutive Odds (LC) 
 # Power Set(CN)
+# Intersection of Two Arrays II(LC)
+# Linked list of strings forms a palindrome(GFG)
 
 
 
