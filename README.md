@@ -1,4 +1,22 @@
 # CP
+# Count Smaller elements(GFG) 
+#  Count Of Divisible Pairs(CN)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Three Consecutive Odds (LC) 
 # Power Set(CN)
