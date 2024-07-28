@@ -1,35 +1,38 @@
 # CP
+
+# https://www.geeksforgeeks.org/problems/remove-duplicates3034/1
+# https://www.naukri.com/code360/problems/program-to-validate-ip-address_981315?count=25&page=1&search=&sort_entity=order&sort_order=ASC
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Count Smaller elements(GFG) 
 #  Count Of Divisible Pairs(CN)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Three Consecutive Odds (LC) 
 # Power Set(CN)
 # Intersection of Two Arrays II(LC)
 # Linked list of strings forms a palindrome(GFG)
-
-
-
-
-
-
-
-
 
 #######################################################################################3333
 
