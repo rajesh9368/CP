@@ -2,8 +2,9 @@
 
 # https://www.geeksforgeeks.org/problems/remove-duplicates3034/1
 # https://www.naukri.com/code360/problems/program-to-validate-ip-address_981315?count=25&page=1&search=&sort_entity=order&sort_order=ASC
-#
-
+# https://www.geeksforgeeks.org/problems/row-with-max-1s0023/1
+# https://www.naukri.com/code360/problems/ninja-and-the-rows_3751635?leftPanelTabValue=PROBLEM&count=25&page=1&search=&sort_entity=order&sort_order=ASC
+# 
 
 
 
