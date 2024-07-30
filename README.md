@@ -4,7 +4,9 @@
 # https://www.naukri.com/code360/problems/program-to-validate-ip-address_981315?count=25&page=1&search=&sort_entity=order&sort_order=ASC
 # https://www.geeksforgeeks.org/problems/row-with-max-1s0023/1
 # https://www.naukri.com/code360/problems/ninja-and-the-rows_3751635?leftPanelTabValue=PROBLEM&count=25&page=1&search=&sort_entity=order&sort_order=ASC
-# 
+# https://www.geeksforgeeks.org/problems/rat-in-a-maze-problem/1
+# https://www.naukri.com/code360/problems/second-most-repeated-word_3210218?count=25&page=1&search=&sort_entity=order&sort_order=ASC&leftPanelTabValue=PROBLEM
+# https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/description/?envType=daily-question&envId=2024-07-30
 
 
 
