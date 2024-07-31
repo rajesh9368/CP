@@ -1,4 +1,26 @@
 # CP
+<h1>August Problems</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # https://www.geeksforgeeks.org/problems/remove-duplicates3034/1
 # https://www.naukri.com/code360/problems/program-to-validate-ip-address_981315?count=25&page=1&search=&sort_entity=order&sort_order=ASC
@@ -7,29 +29,6 @@
 # https://www.geeksforgeeks.org/problems/rat-in-a-maze-problem/1
 # https://www.naukri.com/code360/problems/second-most-repeated-word_3210218?count=25&page=1&search=&sort_entity=order&sort_order=ASC&leftPanelTabValue=PROBLEM
 # https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/description/?envType=daily-question&envId=2024-07-30
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Count Smaller elements(GFG) 
 #  Count Of Divisible Pairs(CN)
 # Three Consecutive Odds (LC) 
