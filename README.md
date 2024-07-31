@@ -1,5 +1,11 @@
 # CP
-<h1>August Problems</h1>
+# Sort An Array of 0s, 1s and 2s (o(4(n)) DNF Problem(“Dutch National Flag problem”)
+# https://www.geeksforgeeks.org/problems/spirally-traversing-a-matrix-1587115621/1 ( Spiral Traversal of matrix)
+# 
+
+
+
+
 
 
 
@@ -35,9 +41,7 @@
 # Power Set(CN)
 # Intersection of Two Arrays II(LC)
 # Linked list of strings forms a palindrome(GFG)
-
 #######################################################################################3333
-
 #  Special Sum (CN)
 #  Find Pair Given Difference (GFG)
 #  Delete Leaves With a Given Value (LC)
@@ -52,7 +56,6 @@
 #  Excel Sheet | Part-2 (CN)
 # Minimize Max Distance to Gas Station(GFG)
 ################################################################################
-
 # Kth Smallest and Largest Element of Array(CN)
 # Nuts and Bolts Problem (GFG)
 #  Height Checker (LC)
@@ -73,9 +76,7 @@
 #  Meta Strings (CN)
 #  Prime Pair with Target Sum ***Pending***
 #  Patching Array (LC)
-
 ################################################################################
-
 # Partition(CN)  ***Pending***
 # Check If two Line segments Intersect (GFG) ***Pending***
 # Sum of Square Numbers (LC)
