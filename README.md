@@ -61,8 +61,20 @@ public class Solution {
         return arr;
     }
 }***
-
-
+# https://leetcode.com/problems/number-of-senior-citizens/?envType=daily-question&envId=2024-08-01
+***import java.util.*;
+class Solution {
+    public int countSeniors(String[] details) {
+        int count=0;
+        for(String i:details){
+            int age=Integer.parseInt(i.substring(11,13));
+            if(age>60){
+                count+=1;
+            }
+        }
+        return count;
+    }
+}***
 
 
 
