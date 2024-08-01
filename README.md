@@ -61,7 +61,7 @@ public class Solution {
         return arr;
     }
 }***
-# https://leetcode.com/problems/number-of-senior-citizens/?envType=daily-question&envId=2024-08-01
+# https://leetcode.com/problems/number-of-senior-citizens/?envType=daily-question&envId=2024-08-01 (Number of Senior Citizens)
 ***import java.util.*;
 class Solution {
     public int countSeniors(String[] details) {
