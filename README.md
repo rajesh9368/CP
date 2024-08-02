@@ -1,4 +1,32 @@
 # CP
+# https://www.naukri.com/code360/problems/row-with-maximum-1-s_1112656?count=25&page=1&search=&sort_entity=order&sort_order=ASC (Row with Maximum 1's)
+ TLE Sol o(n^2)
+ ***import java.util.* ;
+import java.io.*; 
+import java.util.ArrayList;
+public class Solution {
+	public static int maxOne(ArrayList<ArrayList<Integer>> arr) {
+		// Write your code here
+		int maxi= Integer.MIN_VALUE;
+		int ans=0;
+		int n = arr.size();
+		int m = arr.get(0).size();
+		for(int i=0;i<n;i++){
+			int cnt=0;
+			for(int j=0;j<m;j++){
+				if(arr.get(i).get(j)==1){
+					cnt++;
+				}
+				if(cnt>maxi){
+					maxi=cnt;
+				ans=i;
+				}
+			}
+		}
+		return ans;
+	}
+}***
+# 
 # https://www.naukri.com/code360/problems/sort-an-array-of-0s-1s-and-2s_892977?count=25&page=1&search=&sort_entity=order&sort_order=ASC ((Sort An Array of 0s, 1s and 2s (o(4(n)) DNF Problem(“Dutch National Flag problem”)) DNF ALGO...
 ***import java.util.* ;
 import java.io.*; 
