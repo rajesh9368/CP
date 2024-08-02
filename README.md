@@ -76,6 +76,58 @@ class Solution {
     }
 }***
 
+# https://www.geeksforgeeks.org/problems/edit-distance3702/1(Edit Distance) DP on Strings 
+ ***class Solution {
+    public int editDistance(String str1, String str2) {
+        // Code here
+        int n=str1.length();
+        int m = str2.length();
+        int[][] dp=new int[n+1][m+1];
+        for(int i=0;i<=n;i++){
+            for(int j=0;j<=m;j++){
+                if(i==0) dp[i][j]=j;
+                else if(j==0) dp[i][j]=i;
+                else if(str1.charAt(i-1)==str2.charAt(j-1)) dp[i][j]=dp[i-1][j-1];
+                else dp[i][j]=1+Math.min(dp[i-1][j-1],Math.min(dp[i][j-1],dp[i-1][j]));
+            }
+        }
+        return dp[n][m];
+    }
+}***
+
+# https://www.naukri.com/code360/problems/minimum-rotations_1115767?count=25&page=1&search=&sort_entity=order&sort_order=ASC ( Minimum Rotations using Map)
+***import java.util.* ;
+import java.io.*; 
+public class Solution {
+	public static int minimumRotations(int n, String s) {
+		// Write your code here.
+		HashMap<Character,Integer> mpp = new HashMap<>();
+		for(int i=0;i<n;i++){
+			char ch = s.charAt(i);
+			if(!mpp.containsKey(ch)) mpp.put(ch,1);
+			else mpp.put(ch,mpp.get(ch)+1);
+		}
+		int cnt=n;
+		if(mpp.size()<=1) return 1;
+		else return cnt;
+	}}***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -140,7 +192,7 @@ public class Solution
         }
         return len;
     }
-}***
+}}***
 
 
 
