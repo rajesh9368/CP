@@ -1,0 +1,156 @@
+(02-08-2024)----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1--->https://www.geeksforgeeks.org/problems/edit-distance3702/1
+
+     (Solution-1: Memorization Approach)
+     
+        class Solution {
+    static int editD(String s1, String s2, int i, int j, int dp[][]){
+        if(i<0)return j+1;
+        if(j<0)return i+1;
+        if(dp[i][j]!=-1)return dp[i][j];
+        if(s1.charAt(i)==s2.charAt(j)){
+            return dp[i][j]=editD(s1, s2, i-1, j-1, dp);
+        }else{
+            return dp[i][j]=1+Math.min(editD(s1, s2, i-1, j-1, dp), Math.min(editD(s1, s2, i-1, j, dp), editD(s1, s2, i, j-1, dp)));
+        }
+    }
+    public int editDistance(String s1, String s2) {
+        // Code here
+        int n=s1.length();
+        int m=s2.length();
+        int dp[][]=new int[n+1][m+1];
+        for(int row[]:dp){
+            Arrays.fill(row, -1);
+            
+        }
+        return editD(s1, s2, n-1, m-1, dp);
+    }
+}
+
+
+        (Solution-2: Tabulation Method)
+    
+        
+class Solution {
+    public int editDistance(String s1, String s2) {
+        // Code here
+        int n=s1.length();
+        int m=s2.length();
+        int[][] dp=new int[n+1][m+1];
+        for(int i=0; i<=n; i++){
+            dp[i][0]=i;
+        }
+        for(int j=0; j<=m; j++){
+            dp[0][j]=j;
+        }
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=m; j++){
+                if(s1.charAt(i-1)==s2.charAt(j-1)){
+                    dp[i][j]=dp[i-1][j-1];
+                }else{
+                    dp[i][j]=1+Math.min(dp[i-1][j-1], Math.min(dp[i-1][j], dp[i][j-1]));
+                }
+            }
+        }
+        return dp[n][m];
+    }
+
+
+
+    (Solution-3: Space Optimization Method)
+
+class Solution {
+    public int editDistance(String s1, String s2) {
+        // Code here
+        int n=s1.length();
+        int m=s2.length();
+        int prev[]=new int[m+1];
+        int cur[]=new int[m+1];
+        for(int j=0; j<=m; j++){
+            prev[j]=j;
+        }
+        for(int i=1; i<=n; i++){
+            cur[0]=i;
+            for(int j=1; j<=m; j++){
+                if(s1.charAt(i-1)==s2.charAt(j-1)){
+                    cur[j]=prev[j-1];
+                }else{
+                    cur[j]=1+Math.min(prev[j-1],Math.min(prev[j], cur[j-1]));
+                }
+            }
+            prev=cur.clone();
+        }
+        return cur[m];
+    }
+}
+
+
+
+2------>https://leetcode.com/problems/left-and-right-sum-differences/description/
+
+          class Solution {
+    public int[] leftRightDifference(int[] nums) {
+        int n=nums.length;
+        int leftSum[]=new int[n];
+        for(int i=1; i<n; i++){
+            leftSum[i]=leftSum[i-1]+nums[i-1];
+        }
+        int rightSum[]=new int[n];
+        for(int i=n-2; i>=0; i--){
+            rightSum[i]=rightSum[i+1]+nums[i+1];
+        }
+        int ans[]=new int[n];
+        for(int i=0; i<n; i++){
+            ans[i]=Math.abs(leftSum[i]-rightSum[i]);
+        }
+        return ans;
+    }
+}
+
+
+
+3------->https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/description/?envType=daily-question&envId=2024-08-02
+
+
+                   class Solution {
+    public int minSwaps(int[] nums) {
+        int n=nums.length;
+        int totalOnes=0;
+        int circular[]=new int[2*n];
+        for(int i=0; i<n; i++){
+            totalOnes+=nums[i];
+            circular[i]=nums[i];
+            circular[n+i]=nums[i];
+        }
+        int start=0;
+        int end=0;
+        int zeroCount=0;
+        int minZero=Integer.MAX_VALUE;
+        for(; end<totalOnes; end++){
+            if(circular[end]==0){
+                zeroCount++;
+            }
+        }
+        for(;end<circular.length; end++){
+            if(circular[end]==0){
+                zeroCount++;
+            }
+            if(end-start+1==totalOnes){
+                zeroCount=Math.min(minZero, zeroCount);
+
+            }
+            else if(end-start+1>totalOnes){
+                if(circular[start]==0){
+                    zeroCount--;
+                }
+                minZero=Math.min(minZero, zeroCount);
+                start++;
+            }
+        }
+        return minZero;
+    }
+}
+
+
+
+4------>
