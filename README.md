@@ -1,4 +1,26 @@
 # CP
+# https://www.geeksforgeeks.org/problems/the-celebrity-problem/1(The Celebrity Problem) o(n^2)
+***class Solution {
+    // Function to find if there is a celebrity in the party or not.
+    public int celebrity(int mat[][]) {
+        // code here
+        int idx=-1;
+        int n = mat.length;
+        int m = mat[0].length;
+        int rc=0,cc=0;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                rc+=mat[i][j];
+                cc+=mat[j][i];
+            }
+            if(rc==0 && cc==n-1)
+            idx=i;
+            rc=0;
+            cc=0;
+        }
+        return idx;
+    }
+}***
 # https://www.naukri.com/code360/problems/row-with-maximum-1-s_1112656?count=25&page=1&search=&sort_entity=order&sort_order=ASC (Row with Maximum 1's)
  TLE Sol o(n^2)
  ***import java.util.* ;
