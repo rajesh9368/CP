@@ -1,0 +1,65 @@
+(03-08-2024)---->(Biweekly Contest 136)--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1------>https://leetcode.com/problems/find-the-number-of-winning-players/description/
+
+
+class Solution {
+    public int winningPlayerCount(int n, int[][] pick) {
+        int res = 0;
+        for (int i = 0; i < n; i++) {
+            int[] colorCount = new int[11]; 
+            for (int[] p : pick) {
+                if (p[0] == i) {
+                    colorCount[p[1]]++;
+                }
+            }
+            for (int j = 0; j < 11; j++) {
+                if (colorCount[j] > i) {
+                    res++;
+                    break;
+                }
+            }
+        }
+        return res;
+    }
+}
+
+
+2------>https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-i/description/
+
+
+
+class Solution {
+    public int minFlips(int[][] grid) {
+        int n = grid.length;
+        int m = grid[0].length;
+        int rowFlips = 0;
+        int colFlips = 0;
+
+        for (int i = 0; i < n; i++) {
+            int left = 0;
+            int right = m - 1;
+            while (left < right) {
+                if (grid[i][left] != grid[i][right]) {
+                    rowFlips++;
+                }
+                left++;
+                right--;
+            }
+        }
+
+        for (int j = 0; j < m; j++) {
+            int top = 0;
+            int bottom = n - 1;
+            while (top < bottom) {
+                if (grid[top][j] != grid[bottom][j]) {
+                    colFlips++;
+                }
+                top++;
+                bottom--;
+            }
+        }
+
+        return Math.min(rowFlips, colFlips);
+    }
+}
