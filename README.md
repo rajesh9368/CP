@@ -1,5 +1,5 @@
 # CP
-# https://www.geeksforgeeks.org/problems/the-celebrity-problem/1(The Celebrity Problem) o(n^2)
+# https://www.geeksforgeeks.org/problems/the-celebrity-problem/1 (The Celebrity Problem) o(n^2)
 ***class Solution {
     // Function to find if there is a celebrity in the party or not.
     public int celebrity(int mat[][]) {
