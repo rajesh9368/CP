@@ -1,4 +1,39 @@
 # CP
+# https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/?envType=daily-question&envId=2024-08-03(Make Two Arrays Equal by Reversing Subarrays) 
+***class Solution {
+    public boolean canBeEqual(int[] target, int[] arr) {
+        Arrays.sort(target);
+        Arrays.sort(arr);
+        if(target.length!=arr.length) return false;
+        for(int i=0;i<target.length;i++){
+            if(target[i]!=arr[i]) return false;
+        }
+        return true;
+    }
+}***
+# https://www.naukri.com/code360/problems/return-in-row-wave-form_893285?leftPanelTabValue=PROBLEM&count=25&page=1&search=&sort_entity=order&sort_order=ASC(Row Wave Form) O(n^2)
+***import java.util.* ;
+import java.io.*; 
+import java.util.ArrayList;
+public class Solution {
+	public static ArrayList<Integer> rowWaveForm(ArrayList<ArrayList<Integer>> mat) {
+		// Write your code here
+		int n=mat.size(); 
+		 int m=mat.get(0).size();
+		   ArrayList<Integer> r=new ArrayList<>(); 
+		    if(n==0){   return new ArrayList<>();  } 
+			 for(int i=0;i<n ;i++)  {  
+				  if(i%2==0){  
+					   for(int j=0;j<m;j++)   r.add(mat.get(i).get(j));  
+							       } 
+								  else
+								     for(int j=m-1;j>=0;j--){   r.add(mat.get(i).get(j));  
+									 }
+			 }
+										  return r; 
+		// return 0;
+	}
+}***
 # https://www.geeksforgeeks.org/problems/the-celebrity-problem/1 (The Celebrity Problem) o(n^2)
 ***class Solution {
     // Function to find if there is a celebrity in the party or not.
