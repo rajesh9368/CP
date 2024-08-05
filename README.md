@@ -1,5 +1,5 @@
 # CP
-# https://leetcode.com/problems/kth-distinct-string-in-an-array/description/?envType=daily-question&envId=2024-08-05(Using HashMap)
+# https://leetcode.com/problems/kth-distinct-string-in-an-array/description/?envType=daily-question&envId=2024-08-05 (Using HashMap)
 ***class Solution {
     public String kthDistinct(String[] arr, int k) {
        HashMap<String,Integer> mpp = new HashMap<>();
