@@ -1,4 +1,21 @@
 # CP
+# https://leetcode.com/problems/kth-distinct-string-in-an-array/description/?envType=daily-question&envId=2024-08-05(Using HashMap)
+***class Solution {
+    public String kthDistinct(String[] arr, int k) {
+       HashMap<String,Integer> mpp = new HashMap<>();
+       for(String i:arr){
+        if(!mpp.containsKey(i)) mpp.put(i,1);
+        else mpp.put(i,mpp.get(i)+1);
+       }
+       for(String i:arr){
+        if(mpp.get(i)==1){ k--;
+        if(k==0) return i;
+        }
+       }
+    return "";
+    }
+}***
+# 
 # https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/?envType=daily-question&envId=2024-08-03(Make Two Arrays Equal by Reversing Subarrays) 
 ***class Solution {
     public boolean canBeEqual(int[] target, int[] arr) {
