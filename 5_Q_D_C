@@ -210,3 +210,75 @@ class Solution {
         }
         return ans;
     }
+
+
+
+
+(05-08-2024)------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1--->https://www.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1
+
+
+class Solution
+{
+    //Function to return a list containing the bottom view of the given tree.
+    public ArrayList <Integer> bottomView(Node root){
+        // Code here
+        SortedMap<Integer, Integer> map = new TreeMap<>();
+        Queue<Pair> q = new LinkedList<>();
+        q.add(new Pair(root, 0));
+        while(!q.isEmpty()){
+            Pair p = q.poll();
+            Node currNode = p.node;
+            int currLevel = p.level;
+            if(currNode.left != null)
+                q.add(new Pair(currNode.left, currLevel-1));
+            if(currNode.right != null)
+                q.add(new Pair(currNode.right, currLevel+1));
+            map.put(currLevel, currNode.data);
+        }
+        ArrayList<Integer> ans = new ArrayList<>();
+        for(Map.Entry<Integer, Integer> entry:map.entrySet()){
+            ans.add(entry.getValue());
+        }
+        return ans;
+    }
+}
+class Pair{
+    Node node;
+    int level;
+    Pair(Node node, int level){
+        this.node = node;
+        this.level = level;
+    }
+}
+
+
+(06-08-2024)-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+1--->https://www.geeksforgeeks.org/problems/validate-an-ip-address-1587115621/1
+
+class Solution {
+
+    public boolean isValid(String str) {
+        // Write your code here
+        int temp=-1, count=0, index=-1;
+        for(int i=0; i<str.length(); i++){
+            if(str.charAt(i)=='.'){
+                count++;
+                if(temp<0 || temp>255)return false;
+                if(temp!=0 && str.charAt(index+1)=='0')return false;
+                temp=-1;
+                index=i;
+            }else{
+                if(temp==-1)temp=0;
+                temp=temp*10+(str.charAt(i)-'0');
+            }
+        }
+        if(temp<0 || temp>255 || count!=3)return false;
+        if(temp!=0 && str.charAt(index+1)=='0')return false;
+        return true;
+    }
+}
