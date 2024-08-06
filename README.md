@@ -1,4 +1,38 @@
 # CP
+# https://www.geeksforgeeks.org/problems/validate-an-ip-address-1587115621/1 (IPV4 valid Address)
+***class Solution {
+    public boolean isValid(String str) {
+        if (str.length() < 7 || str.length() > 15) return false;
+        int sum = 0, cnt = 0;
+        int i = 0;
+        int segmentLength = 0;
+        while (i < str.length()) {
+            char ch = str.charAt(i);
+            if (ch == '.') {
+                cnt++;
+                if (cnt > 3 || sum > 255 || segmentLength == 0) {
+                    return false;
+                }
+                sum = 0;
+                segmentLength = 0;
+            } else if (Character.isDigit(ch)) {
+                if (segmentLength == 0 && ch == '0' && i + 1 < str.length() && str.charAt(i + 1) != '.') {
+                    return false; 
+                }
+                sum = sum * 10 + (ch - '0');
+                segmentLength++;
+                if (sum > 255) {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+            i++;
+        } 
+        return (cnt == 3 && sum <= 255 && segmentLength > 0);
+    }
+}***
+# 
 # https://leetcode.com/problems/kth-distinct-string-in-an-array/description/?envType=daily-question&envId=2024-08-05 (Using HashMap)
 ***class Solution {
     public String kthDistinct(String[] arr, int k) {
