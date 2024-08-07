@@ -1,4 +1,39 @@
 # CP
+# https://www.naukri.com/code360/problems/amicable-pair_1402328?count=25&page=1&search=&sort_entity=order&sort_order=ASC&leftPanelTabValue=PROBLEM (AMICABLE PROBLEMS)
+***import java.util.* ;
+import java.io.*; 
+public class Solution {
+    public static boolean amicablePair(int x, int y){
+        // Write your code here.
+        int sum=0,sum2=0;
+        for(int i=1;i<=x;i++){
+            if(x%i==0) sum+=i;
+            if(y%i==0) sum2+=i;
+        }
+        if(sum==y || sum2==x) return true;
+        return false;
+    }
+}***
+# https://www.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1 (K-th element of two Arrays)
+***class Solution {
+    public long kthElement(int k, int arr1[], int arr2[]) {
+        // code here
+        ArrayList<Integer> temp = new ArrayList<>();
+        for(int i=0;i<arr1.length;i++){
+            temp.add(arr1[i]);
+        }
+         for(int i=0;i<arr2.length;i++){
+            temp.add(arr2[i]);
+        }
+        Collections.sort(temp);
+        for(int i=0;i<temp.size();i++){
+            k--;
+            if(k==0) return temp.get(i);
+        }
+        return -1;
+    }
+}***
+# 
 # https://www.geeksforgeeks.org/problems/validate-an-ip-address-1587115621/1 (IPV4 valid Address)
 ***class Solution {
     public boolean isValid(String str) {
@@ -332,14 +367,149 @@ public class Solution
 
 
 
+# Recursion
 
+# what is Recursion,base case,backTracking and segmentation fault,functional Approch?
+# Basic of Recursion ? 
+ ***import java.util.*;
+class Main{
+    static void operation(int n,int count){
+        // if(count==n) return;
+        System.out.println(count);
+        count++;
+        operation(n,count);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        operation(n,0);
+    }
+}***
+# https://www.naukri.com/code360/problems/print-name_4607847?count=25&page=1&search=&sort_entity=order&sort_order=ASC&leftPanelTabValue=PROBLEM (Print name 5 times)
+***import java.util.* ;
+import java.io.*; 
+public class Solution {
+    static void operation(String s,int i){
+        if(i==5) return;
+        System.out.println(s);
+        operation(s,i+1);
+    }
+    static void printName(String s){
+        // Write your code here.
+        operation(s,0);
+    }
+}***
 
+# Print linearly from 1 to N 
+***import java.util.*;
+class Main{
+    static void operation(int n,int i){
+        if(i>n) return;
+        System.out.println(i);
+        operation(n,i+1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        operation(n,1);
+    }
+}***
 
+# Print linearly from N to 1
+***import java.util.*;
+class Main{
+    static void operation(int n,int i){
+        if(i==0) return;
+        System.out.println(i);
+        operation(n,i-1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        operation(n,n);
+    }
+}***
 
+# Print linearly from 1 to N (By backTracking)
+***import java.util.*;
+class Main{
+    static void operation(int n,int i){
+        if(i==0) return;
+        operation(n,i-1);
+        System.out.println(i);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        operation(n,n);
+    }
+}***
 
+# Print linearly from N to 1(By BackTracking)
+***import java.util.*;
+class Main{
+    static void operation(int n,int i){
+        if(i==n) return;
+        operation(n,i+1);
+        System.out.println(i);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        operation(n,0);
+    }
+}***
 
+# https://www.naukri.com/code360/problems/first-n_4605104?count=25&page=1&search=&sort_entity=order&sort_order=ASC&leftPanelTabValue=PROBLEM (Summation of first n numbers)
+***import java.util.* ;
+import java.io.*; 
+public class Solution {
+	public static long operation(int n,int i,int sum){
+		if(i>n){
+			return sum;
+		}
+		return operation(n,i+1,sum+i);
+	}
+	public static long firstN(int n) {
+		// Write your code here.
+		return operation(n,1,0);
+	}
+}***
 
-
+# https://www.naukri.com/code360/problems/factorial_975273?leftPanelTabValue=PROBLEM&count=25&page=1&search=&sort_entity=order&sort_order=ASC (Factorial of a no)
+***public class Solution {
+    public static void factorial(int n) {
+        long fact=  1;
+        fact = recur(n);
+        System.out.print(fact);
+    }
+    public static long recur(int n) {
+        if(n == 1) {
+            return 1;
+        } else {
+            return n * recur(n-1);
+        }
+    }
+    }***
+    
+# https://www.naukri.com/code360/problems/reverse-an-array_8365444?count=25&page=1&search=&sort_entity=order&sort_order=ASC&leftPanelTabValue=PROBLEM (Reverse an array)
+***public class Solution {
+   static void swap(int n,int[] arr,int i){
+            int temp = arr[i];
+            arr[i] = arr[n - i - 1];
+            arr[n - i - 1] = temp;
+    }
+    static void operation(int n,int[] arr,int i){
+        if(i>=n/2) return;
+        swap(n,arr,i);
+        operation(n,arr,i+1);
+    }
+    public static int[] reverseArray(int n, int []arr) {
+        // Write your code here.
+        operation(n,arr,0);
+        return arr;
+    }
+}***
 
 
 
