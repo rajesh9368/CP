@@ -510,13 +510,90 @@ public class Solution {
         return arr;
     }
 }***
-
-
-
- <span style="color: red;">Recursion on Subsequences</span>
-
-
-
+ # Recursion on Subsequences
+ # Differ between subsequences,subarray and substring
+ # https://leetcode.com/problems/subsets/description/  (POWER SET ON ARRAY) 
+ ***class Solution {
+    public static void operation(int[] nums,int i,ArrayList<Integer> arr,List<List<Integer>> res){
+        int n = nums.length;
+        if(i==n){
+            res.add(new ArrayList<>(arr));
+            return;
+        }
+        arr.add(nums[i]);
+        operation(nums,i+1,arr,res);
+        arr.remove(arr.size()-1);
+        operation(nums,i+1,arr,res);
+    }
+    public List<List<Integer>> subsets(int[] nums) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        List<List<Integer>> res= new ArrayList<>();
+        operation(nums,0,arr,res);
+        return res;
+    }
+}***
+# POWER SET ON STRINGS(SUBSEQUENCES ON STRINGS)
+***import java.util.*;
+class Main{
+    static void operation(int i,String s,String str){
+        int n = s.length();
+        if(i>=n){
+            System.out.println(str);
+            return;
+        }
+        operation(i+1,s,str+s.charAt(i));
+        operation(i+1,s,str);
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        operation(0,s,"");
+    }
+}***
+# Subarray Sum equals K
+***import java.util.*;
+class Main{
+    static void operation(int i,int n,int[] arr,int sum,ArrayList<Integer> ans,int k){
+        if(i==arr.length){
+            if(k==sum){
+                count++;
+            }
+            return;
+        }
+        ans.add(arr[i]);
+       operation(i+1,n,arr,sum+arr[i],ans,k);
+       ans.remove(ans.size()-1);
+       operation(i+1,n,arr,sum,ans,k);
+    }
+    public static void main(String[] args){
+       Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+       int[] arr = new int[n];
+       for(int i=0;i<n;i++) arr[i]=sc.nextInt();
+       int k = sc.nextInt();
+       ArrayList<Integer> ans = new ArrayList<>();
+       operation(0,n,arr,0,ans,k);
+    }
+}***
+# https://www.naukri.com/code360/problems/number-of-subsets_3952532?leftPanelTabValue=PROBLEM&count=25&page=1&search=&sort_entity=order&sort_order=ASC (Count Subsets with Sum K)
+***import java.util.*;
+import java.io.*;
+public class Solution {
+    public static int operation(int[] num,int tar,int sum,int i){
+        int n = num.length;
+        if(i==n){
+            if(sum==tar) return 1;
+            return 0;
+        }
+        int l=operation(num,tar,sum+num[i],i+1);
+        int r=operation(num,tar,sum,i+1);
+        return l+r;
+    }
+    public static int findWays(int num[], int tar) {
+        // Write your code here.
+        return operation(num,tar,0,0);
+    }
+}***
 
 
 
