@@ -765,6 +765,53 @@ public class Solution {
         return maxsum;
     }
 }***
+# https://www.naukri.com/code360/problems/distinct-characters_2221410?count=25&page=1&search=&sort_entity=order&sort_order=ASC  (Longest Substring with At Most K Distinct Characters)
+***import java.util.HashMap;
+import java.util.Map;
+public class Solution {
+	public static int kDistinctChars(int k, String str) {
+		int maxlen = 0, l = 0, r = 0;
+		Map<Character, Integer> mpp = new HashMap<>();
+		while (r < str.length()) {
+			char currentChar = str.charAt(r);
+			mpp.put(currentChar, mpp.getOrDefault(currentChar, 0) + 1);
+			while (mpp.size() > k) {
+				char leftChar = str.charAt(l);
+				mpp.put(leftChar, mpp.get(leftChar) - 1);
+				if (mpp.get(leftChar) == 0)
+					mpp.remove(leftChar);
+				l++;
+			}
+			maxlen = Math.max(maxlen, r - l + 1);
+			r++;
+		}
+		return maxlen;
+	}
+}***
 
+# https://www.naukri.com/code360/problems/subarrays-with-at-most-k-distinct-values_1473804?count=25&page=1&search=&sort_entity=order&sort_order=ASC&leftPanelTabValue=PROBLEM(Subarrays With ‘K’ Distinct Values)
+***import java.util.*;
+public class Solution {
+    public static int operation(int[] nums,int n,int k){
+        int ans = 0;
+        HashMap<Integer,Integer> mpp = new HashMap<>();
+        int j = 0, i = 0;
+        while (j < n) {
+            mpp.put(nums[j], mpp.getOrDefault(nums[j], 0) + 1);
+            while (mpp.size() > k) {
+                mpp.put(nums[i], mpp.get(nums[i]) - 1);
+                if (mpp.get(nums[i]) == 0) mpp.remove(nums[i]);
+                i++;
+            }
+            ans += j - i + 1;
+            j++;
+        }
+        return ans;
+    }
+    public static int kDistinctSubarrays(int[] nums, int n, int k) {
+        // Write your code here.
+        return operation(nums,n,k)-operation(nums,n,k-1);
+    }
+}***
 
 
