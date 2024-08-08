@@ -725,7 +725,29 @@ public class Solution {
         return one-two;
     }
 }***
-
+# Number of Substrings Containing All Three Characters (Number of Substrings Containing All Three Characters)
+***class Solution {
+    public int numberOfSubstrings(String s) {
+        int counta=0,countb=0,countc=0,i=0,j=0;
+        int ans=0;
+        int n  = s.length();
+        while(j<n){
+            if(s.charAt(j)=='a') counta++;
+            else if(s.charAt(j)=='b') countb++;
+            else countc++;
+            while(counta>=1&&countb>=1&&countc>=1){
+                ans+=(n-1)-j+1;
+                if(s.charAt(i)=='a') counta--;
+                else if(s.charAt(i)=='b') countb--;
+                else countc--;
+                i++;
+            }
+            System.out.println(ans);
+            j++;
+        }
+        return ans;
+    }
+}***
 # https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/ (Maximum Points You Can Obtain from Cards)
 ***class Solution {
     public int maxScore(int[] cardpoints, int k) {
