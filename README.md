@@ -595,10 +595,154 @@ public class Solution {
     }
 }***
 
+# SLIDING WINDOW
+# https://leetcode.com/problems/longest-substring-without-repeating-characters/description/  (Longest Substring Without Repeating Characters)
+***class Solution {
+    public int lengthOfLongestSubstring(String s) {
+       int n = s.length();
+		HashSet<Character> st = new HashSet<>();
+		int i=0,j=0,maxlen=0;
+		while(i<n && j<n){
+			if(!st.contains(s.charAt(j))){
+				st.add(s.charAt(j++));
+				maxlen = Math.max(maxlen,j-i);
+			}
+			else
+			st.remove(s.charAt(i++));
+		}
+		return maxlen;
+    }
+}***
+# https://www.naukri.com/code360/problems/maximum-consecutive-ones_892994?count=25&page=1&search=&sort_entity=order&sort_order=ASC&leftPanelTabValue=PROBLEM (Maximum Consecutive Ones)
+***import java.util.ArrayList;
+public class Solution {
+	public static int longestSubSeg(ArrayList<Integer> arr , int n, int k) {
+		// Write your code here.
+		int zero=0;
+		int l=0,r=0,maxlen=0;
+		while(r<n){
+			if(arr.get(r)==0) zero++;
+			if(zero>k){
+				if(arr.get(l)==0){
+					zero--;
+				}
+				l++;
+			}
+			if(zero<=k)
+			maxlen=Math.max(maxlen,r-l+1);
+			r++;
+		}
+		return maxlen;
+	}
+}***
 
+# https://leetcode.com/problems/fruit-into-baskets/  (Fruit Into Baskets/maxlen subarray with atmost two types of a number)
+***class Solution {
+    public int totalFruit(int[] arr) {
+          int l = 0, r = 0, maxlen = 0;
+        HashMap<Integer, Integer> mpp = new HashMap<>();
+        while (r < arr.length) {
+            if(!mpp.containsKey(arr[r])) mpp.put(arr[r],1);
+            else mpp.put(arr[r],mpp.get(arr[r])+1);
+            if (mpp.size() > 2) {
+                mpp.put(arr[l], mpp.get(arr[l]) - 1);
+                if (mpp.get(arr[l]) == 0) {
+                    mpp.remove(arr[l]);
+                }
+                l++;
+            }
+                maxlen = Math.max(maxlen, r - l + 1);
+                r++;
+        }
+        return maxlen;
+    }
+}***
+# https://leetcode.com/problems/longest-repeating-character-replacement/  (Longest Repeating Character Replacement)
+***import java.util.*;
+public class Solution {
+    public static int longestRepeatingSubstring(String s, int k) {
+        // Write your code here.
+        HashMap<Character,Integer> mpp = new HashMap<>();
+        int l=0,r=0,maxlen=0;
+        while(r<s.length()){
+            if(!mpp.containsKey(s.charAt(r))) mpp.put(s.charAt(r),1);
+            else mpp.put(s.charAt(r),mpp.get(s.charAt(r))+1);
+            int maxf = Collections.max(mpp.values());
+            if((r-l+1)-maxf>k){
+                mpp.put(s.charAt(l),mpp.get(s.charAt(l))-1);
+                if(mpp.get(s.charAt(l))==0){
+                    mpp.remove(s.charAt(l));
+                }
+                l++;
+            }
+            maxlen=Math.max(maxlen,r-l+1);
+            r++;
+        }
+        return maxlen;
+    }
+}***
 
+# https://leetcode.com/problems/binary-subarrays-with-sum/description/  (Binary Subarrays With Sum)
+***class Solution {
+    public int operation(int[] nums,int goal){
+        if (goal < 0) return 0; 
+        int n = nums.length;
+        int l=0,r=0,cnt=0,sum=0;
+        while(r<n){
+            sum=sum+nums[r];
+            while(sum>goal){
+                sum=sum-nums[l];
+                l++;
+            }
+            cnt=cnt+(r-l+1);
+            r++;
+        }
+        return cnt;
+    }
+    public int numSubarraysWithSum(int[] nums, int goal) {
+        return operation(nums,goal)-operation(nums,goal-1);
+    }
+}***
 
+# https://leetcode.com/problems/count-number-of-nice-subarrays/description/  (Count Number of Nice Subarrays)
+***class Solution {
+    public int operation(int[] nums,int k){
+        int  n = nums.length;
+        int l=0,r=0,sum=0,cnt=0;
+        while(r<=n-1){
+            sum+=nums[r]%2;
+            while(sum > k){
+                sum-=nums[l]%2;
+                l++;
+            }
+            cnt+=r-l+1;
+            r++; 
+        }
+        return cnt;
+        }
+    public int numberOfSubarrays(int[] nums, int k) {
+        int one = operation(nums,k),two = operation(nums,k-1);
+        return one-two;
+    }
+}***
 
+# https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/ (Maximum Points You Can Obtain from Cards)
+***class Solution {
+    public int maxScore(int[] cardpoints, int k) {
+         int n = cardpoints.length;
+        int lsum = 0, rsum = 0, maxsum = 0;
+        for (int i = 0; i < k; i++) {
+            lsum += cardpoints[i];
+        }
+        maxsum = lsum;
+        for (int i = k - 1; i >= 0; i--) {
+            lsum -= cardpoints[i];
+            rsum += cardpoints[n - (k - i)];
+            maxsum = Math.max(maxsum, lsum + rsum);
+        }
+        return maxsum;
+    }
+}***
 
 
 
